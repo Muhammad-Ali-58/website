@@ -3,6 +3,7 @@ import VideoSection from '@/components/VideoSection';
 import ClientMarquee from '@/components/ClientMarquee';
 import MeetSam from '@/components/Meet';
 import LatestWork from '@/components/LatestWork';
+import ProcessSection from '@/components/ProcessSection';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ClientMarquee />
       <MeetSam />
       <LatestWork />
+      <ProcessSection />
     </main>
   );
 }
