@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 type NavItem = {
   label: string;
   href?: string;
@@ -93,15 +95,64 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [submenuVisible, setSubmenuVisible] = useState(false);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMobileMenuOpen]);
+
+  // Reset menu state when closing the mobile menu completely
+  const handleCloseMenu = () => {
+    setIsMobileMenuOpen(false);
+    // Reset after animation
+    setTimeout(() => {
+      setSubmenuVisible(false);
+      setActiveSubmenu(null);
+    }, 500);
+  };
+
+  const openSubmenu = (label: string) => {
+    setActiveSubmenu(label);
+    requestAnimationFrame(() => {
+        setSubmenuVisible(true);
+    });
+  };
+
+  const closeSubmenu = () => {
+    setSubmenuVisible(false);
+    // Optional: clear active submenu after animation if desired, 
+    // but keeping it populated makes reusable easier if opening same menu again.
+  };
+
   return (
     <header className="relative z-50 px-6 py-6 sm:px-10 sm:py-8 lg:px-12">
       <div className="mx-auto flex max-w-[1600px] items-center justify-between">
         {/* Logo */}
-        <div className="font-aeonik text-xl font-medium tracking-tight text-white">
+        <div className="font-aeonik text-xl font-medium tracking-tight text-white z-50 transition-colors duration-300">
           <span className="opacity-60">by</span> Crawford
         </div>
 
-        {/* Navigation Pill */}
+        {/* Mobile Hamburger Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(true)}
+          className="group flex h-12 w-12 flex-col items-end justify-center gap-1.5 rounded-full bg-transparent p-2 lg:hidden"
+        >
+          <span className="h-0.5 w-6 bg-white transition-transform group-hover:w-8" />
+          <span className="h-0.5 w-8 bg-white" />
+          <span className="h-0.5 w-4 bg-white transition-transform group-hover:w-8" />
+        </button>
+
+        {/* Desktop Navigation Pill */}
         <nav
           className="hidden rounded-[100px] px-1 py-2 backdrop-blur-[4px] transition-all duration-300 ease-out lg:block"
           style={{
@@ -182,7 +233,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* CTA Button */}
+        {/* Desktop CTA Button */}
         <button className="hidden rounded-full bg-[#506c83] px-6 py-4 font-aeonik text-sm font-medium text-white transition-all hover:bg-[#405669] hover:shadow-lg lg:flex lg:items-center lg:gap-2 cursor-pointer">
           Schedule a call
           <svg
@@ -199,6 +250,126 @@ export default function Header() {
             />
           </svg>
         </button>
+
+        {/* Mobile Menu Overlay */}
+        <div
+          className={`fixed inset-0 z-[60] flex flex-col bg-white transition-transform duration-500 ease-in-out lg:hidden ${
+            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          {/* Mobile Header */}
+          <div className="flex items-center justify-between px-6 py-6 sm:px-10 sm:py-8">
+            <div className="font-aeonik text-xl font-medium tracking-tight text-[#1E293B]">
+              <span className="opacity-60">by</span> Crawford
+            </div>
+            <button
+              onClick={handleCloseMenu}
+              className="group flex h-12 w-12 items-center justify-center rounded-full bg-transparent text-[#1E293B]"
+            >
+              <svg
+                className="h-8 w-8 transition-transform duration-300 group-hover:rotate-90"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          {/* Mobile Navigation Sliding Container */}
+          <div className="relative w-full flex-1 overflow-hidden">
+            <div
+              className={`flex h-full w-[200%] transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+                submenuVisible ? '-translate-x-1/2' : 'translate-x-0'
+              }`}
+            >
+              {/* Main Menu Pane (Left Half) */}
+              <div className="flex w-1/2 flex-col items-center overflow-y-auto px-6 pb-20">
+                <nav className="my-auto flex flex-col items-center gap-6 text-center">
+                  {NAV_ITEMS.map((item) => (
+                    <div
+                      key={item.label}
+                      className="group flex flex-col items-center"
+                    >
+                      {item.dropdownItems ? (
+                        <button
+                          onClick={() => openSubmenu(item.label)}
+                          className="flex items-center gap-2 font-aeonik text-3xl font-medium text-[#1E293B] transition-colors hover:text-[#506C83]"
+                        >
+                          {item.label}
+                          <svg
+                            className="h-5 w-5 text-[#94A3B8]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </button>
+                      ) : (
+                      <a
+                        href={item.href}
+                        className="font-aeonik text-3xl font-medium text-[#1E293B] transition-colors hover:text-[#506C83]"
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                    </div>
+                  ))}
+                </nav>
+              </div>
+
+              {/* Submenu Pane (Right Half) */}
+              <div className="flex w-1/2 flex-col items-center overflow-y-auto px-6 pb-20">
+                <div className="my-auto flex w-full flex-col items-center">
+                  <button
+                    onClick={closeSubmenu}
+                    className="mb-8 flex items-center gap-2 font-aeonik text-lg text-[#94A3B8] transition-colors hover:text-[#1E293B]"
+                  >
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                    Back
+                  </button>
+                  <div className="flex flex-col gap-6 text-center">
+                    {NAV_ITEMS.find(
+                      (item) => item.label === activeSubmenu
+                    )?.dropdownItems?.map((subItem) => (
+                      <a
+                        key={subItem.title}
+                        href="#"
+                        className="font-aeonik text-2xl font-medium text-[#1E293B] transition-colors hover:text-[#506C83]"
+                      >
+                        {subItem.title}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );
