@@ -12,6 +12,7 @@ import IntegrationsSection from '@/components/IntegrationsSection';
 import WhyChooseSection from '@/components/WhyChooseSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import ContactSection from '@/components/ContactSection';
+import BlogSection from '@/components/BlogSection';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <WhyChooseSection />
       <FeaturesSection />
       <ContactSection />
+      <BlogSection />
     </main>
   );
 }
