@@ -4,6 +4,7 @@ import CoreValuesSection from '@/components/CoreValuesSection';
 import RecordOfResultsSection from '@/components/RecordOfResultsSection';
 import LatestWork from '@/components/LatestWork';
 import ClientReviewsSection from '@/components/ClientReviewsSection';
+import OurOfficesSection from '@/components/OurOfficesSection';
 import ProcessSection from '@/components/ProcessSection';
 import FAQSection from '@/components/FAQSection';
 
@@ -17,6 +18,7 @@ export default function AboutPage() {
             <ProcessSection />
             <LatestWork />
             <ClientReviewsSection />
+            <OurOfficesSection />
             <FAQSection />
         </main>
     );
