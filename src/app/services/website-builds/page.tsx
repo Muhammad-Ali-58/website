@@ -1,6 +1,8 @@
 import ServiceHeroSection from '@/components/services/ServiceHeroSection';
 import LatestWork from '@/components/LatestWork';
 import ClientMarquee from '@/components/ClientMarquee';
+import GrowthSection from '@/components/services/GrowthSection';
+import ServiceWhyChooseSection from '@/components/services/ServiceWhyChooseSection';
 import PricingSection from '@/components/PricingSection';
 import ServiceFAQSection from '@/components/services/ServiceFAQSection';
 
@@ -24,6 +26,8 @@ export default function WebsiteBuildsPage() {
             />
             <LatestWork />
             <ClientMarquee />
+            <GrowthSection />
+            <ServiceWhyChooseSection />
             <PricingSection />
             <ServiceFAQSection />
         </main>
