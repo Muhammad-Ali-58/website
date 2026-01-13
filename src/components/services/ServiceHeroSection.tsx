@@ -77,7 +77,7 @@ export default function ServiceHeroSection({
                         </h1>
 
                         {/* Description */}
-                        <div className={`font-aeonik text-[#E8ECF0]/80 leading-relaxed max-w-xl ${descriptionClassName}`}>
+                        <div className={`font-aeonik text-[#E8ECF0]/80 leading-relaxed max-w-xl whitespace-pre-line ${descriptionClassName}`}>
                             {description}
                         </div>
 

@@ -10,31 +10,31 @@ const PROJECTS = [
   {
     tag: 'Security',
     title: 'Waltz',
-    image: '/Rescor.webp',
+    image: '/waltz.png',
     link: '#',
   },
   {
     tag: 'SaaS',
     title: 'Zappy',
-    image: '/Markups.webp',
+    image: '/zappy.png',
     link: '#',
   },
   {
     tag: 'Tech',
     title: 'ZeroFill',
-    image: '/Loomia.webp',
+    image: '/zerofill.png',
     link: '#',
   },
   {
     tag: 'Education',
-    title: 'SchoolAi',
-    image: '/hybrid.webp',
+    title: 'Schole AI',
+    image: '/schole.png',
     link: '#',
   },
   {
     tag: 'Agency',
-    title: 'Socialize me',
-    image: '/Tradie.webp',
+    title: 'Flow',
+    image: '/flow.png',
     link: '#',
   },
 ];
