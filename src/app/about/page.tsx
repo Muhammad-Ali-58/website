@@ -3,11 +3,10 @@ import AboutHeroSection from '@/components/AboutHeroSection';
 import CoreValuesSection from '@/components/CoreValuesSection';
 import RecordOfResultsSection from '@/components/RecordOfResultsSection';
 import LatestWork from '@/components/LatestWork';
-import ClientReviewsSection from '@/components/ClientReviewsSection';
 import OurOfficesSection from '@/components/OurOfficesSection';
 import ProcessSection from '@/components/ProcessSection';
-import StartProjectSection from '@/components/StartProjectSection';
-import FAQSection from '@/components/FAQSection';
+import BlogSection from '@/components/BlogSection';
+import ContactSection from '@/components/ContactSection';
 
 export default function AboutPage() {
     return (
@@ -18,10 +17,9 @@ export default function AboutPage() {
             <RecordOfResultsSection />
             <ProcessSection />
             <LatestWork />
-            <ClientReviewsSection />
             <OurOfficesSection />
-            <StartProjectSection />
-            <FAQSection />
+            <ContactSection />
+            <BlogSection />
         </main>
     );
 }

@@ -78,7 +78,7 @@ export default function PricingSection({
         {/* Header */}
         <motion.div
           className="mb-20 flex flex-col items-center text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -131,7 +131,7 @@ function PricingCard({ plan, isLast, index }: { plan: PricingPlan, isLast: boole
           : 'bg-white rounded-[20px] text-[#181A1D] shadow-2xl shadow-black/40 lg:z-10'
         }
       `}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}

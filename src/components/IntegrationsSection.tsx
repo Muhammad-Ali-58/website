@@ -19,7 +19,7 @@ export default function IntegrationsSection() {
         {/* Header */}
         <motion.div
           className="mb-4 flex flex-col items-center text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -41,8 +41,8 @@ export default function IntegrationsSection() {
         {/* Integration Visual */}
         <motion.div
           className="relative w-full max-w-7xl mx-auto h-[500px] sm:h-[550px] lg:h-[750px] mt-0"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >

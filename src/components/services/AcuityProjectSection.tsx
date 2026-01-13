@@ -2,12 +2,19 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function AcuityProjectSection() {
     return (
         <section className="relative w-full overflow-hidden bg-white py-12 lg:py-24">
             {/* Background Container with Cross markers at corners */}
-            <div className="relative mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16 xl:px-20">
+            <motion.div
+                className="relative mx-auto max-w-[1700px] px-6 sm:px-10 lg:px-16 xl:px-20"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
 
                 {/* Colored Background Layer */}
                 <div
@@ -129,7 +136,7 @@ export default function AcuityProjectSection() {
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
         </section>
     );
 }

@@ -22,10 +22,18 @@ const SOCIAL_LINKS = [
     { icon: <IoMailOutline />, label: "Email" }
 ];
 
+import { motion } from 'framer-motion';
+
 export default function AcuityAuthorSection() {
     return (
         <section className="bg-white overflow-hidden">
-            <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
+            <motion.div
+                className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 xl:gap-32">
 
                     {/* Left Side: Image with Overlays */}
@@ -93,7 +101,7 @@ export default function AcuityAuthorSection() {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

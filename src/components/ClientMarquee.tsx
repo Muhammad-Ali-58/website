@@ -27,7 +27,7 @@ export default function ClientMarquee() {
         {/* Header Content */}
         <motion.div
           className="mb-16 flex flex-col items-center gap-6"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -44,7 +44,7 @@ export default function ClientMarquee() {
         {/* Marquees */}
         <motion.div
           className="flex flex-col gap-10 sm:gap-14"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}

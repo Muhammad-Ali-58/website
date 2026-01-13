@@ -51,12 +51,20 @@ const PROCESS_STEPS = [
     }
 ];
 
+import { motion } from 'framer-motion';
+
 export default function AcuityProcessSection() {
     const swiperRef = useRef<SwiperType | null>(null);
 
     return (
         <section className="bg-[#D1D7DD] py-12 sm:py-12 overflow-hidden mt-10">
-            <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
+            <motion.div
+                className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
 
                 {/* Header Section */}
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
@@ -163,7 +171,7 @@ export default function AcuityProcessSection() {
                     </Swiper>
                 </div>
 
-            </div>
+            </motion.div>
         </section>
     );
 }

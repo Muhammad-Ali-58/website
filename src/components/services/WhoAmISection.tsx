@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { HiArrowUpRight, HiCheck } from 'react-icons/hi2';
+import { motion } from 'framer-motion';
 
 function AnimatedNumber({ value }: { value: string }) {
     const [count, setCount] = useState(0);
@@ -69,7 +70,13 @@ export default function WhoAmISection() {
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-24">
 
                     {/* Left Content */}
-                    <div className="flex-1 max-w-2xl">
+                    <motion.div
+                        className="flex-1 max-w-2xl"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
                         {/* Badge */}
                         <div className="inline-flex items-center rounded-full px-4 py-1.5 mb-6 bg-[#BEC8D1]">
                             <span className="h-1.5 w-1.5 rounded-full bg-[#516C83] mr-2"></span>
@@ -105,10 +112,16 @@ export default function WhoAmISection() {
                             Schedule a call
                             <HiArrowUpRight className="h-4 w-4" />
                         </button>
-                    </div>
+                    </motion.div>
 
                     {/* Right Image with Stats Overlay */}
-                    <div className="w-full lg:flex-1 max-w-[500px] lg:max-w-none">
+                    <motion.div
+                        className="w-full lg:flex-1 max-w-[500px] lg:max-w-none"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
                         {/* Outer Frame/Border */}
                         <div className="relative p-2 rounded-[20px] bg-[#D6DADE]">
                             <div className="relative aspect-[4/5] lg:aspect-square overflow-hidden rounded-[12px] bg-gray-200">
@@ -136,7 +149,7 @@ export default function WhoAmISection() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

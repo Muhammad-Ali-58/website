@@ -46,7 +46,7 @@ export default function LatestWork() {
       <div className="mx-auto max-w-[1600px] px-6 sm:px-8 lg:px-12">
         <motion.div
           className="flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -78,8 +78,8 @@ export default function LatestWork() {
       {/* Carousel Container */}
       <motion.div
         className="mt-16 sm:mt-20"
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >

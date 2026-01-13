@@ -58,7 +58,7 @@ export default function BlogSection() {
         {/* Header Section */}
         <motion.div
           className="mb-16 flex flex-col lg:flex-row lg:items-end justify-between gap-8"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -103,7 +103,7 @@ export default function BlogSection() {
         {/* Blog Carousel */}
         <motion.div
           className="blog-swiper-container [&_.swiper-wrapper]:flex [&_.swiper-wrapper]:items-stretch"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}

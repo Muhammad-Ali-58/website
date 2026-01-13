@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../Header';
+import { motion } from 'framer-motion';
 
 interface ServiceHeroSectionProps {
     badgeText: string;
@@ -49,7 +50,13 @@ export default function ServiceHeroSection({
                 </div>
             </div>
 
-            <div className="flex-1 w-full max-w-[1920px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col justify-center py-20 lg:py-32">
+            <motion.div
+                className="flex-1 w-full max-w-[1920px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col justify-center py-20 lg:py-32"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
                     {/* Left Content */}
@@ -98,7 +105,7 @@ export default function ServiceHeroSection({
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import { motion } from 'framer-motion';
 
 export interface ChooseItem {
     title: string;
@@ -44,7 +45,13 @@ export default function ServiceWhyChooseSection({
             <div className="max-w-[1600px] mx-auto px-6 lg:px-12 xl:px-16">
 
                 {/* Header Section */}
-                <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-20 gap-8">
+                <motion.div
+                    className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-20 gap-8"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
                     <div className="max-w-3xl">
                         {/* Badge */}
                         <div className="inline-flex items-center rounded-full px-4 py-1.5 mb-8 bg-[#CFD6DC]">
@@ -63,12 +70,19 @@ export default function ServiceWhyChooseSection({
                         Schedule a call
                         <HiArrowUpRight className="h-4 w-4" />
                     </button>
-                </div>
+                </motion.div>
 
                 {/* Features Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
                     {items.map((item, index) => (
-                        <div key={index} className="flex flex-col items-start">
+                        <motion.div
+                            key={index}
+                            className="flex flex-col items-start"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                        >
                             {/* Icon */}
                             <Image
                                 src={item.icon}
@@ -85,7 +99,7 @@ export default function ServiceWhyChooseSection({
                             <p className="font-aeonik text-base text-[#181A1D]/60 leading-relaxed max-w-sm">
                                 {item.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

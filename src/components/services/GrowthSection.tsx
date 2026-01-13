@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export interface GrowthFeature {
     title: string;
@@ -71,7 +72,13 @@ export default function GrowthSection({
             <div className="max-w-[1600px] mx-auto px-6 lg:px-12 xl:px-16">
 
                 {/* Header Section */}
-                <div className="max-w-4xl mb-20">
+                <motion.div
+                    className="max-w-4xl mb-20"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
                     {/* Badge */}
                     <div className="inline-flex items-center rounded-full px-4 py-1.5 mb-8"
                         style={badgeGradient}
@@ -91,14 +98,18 @@ export default function GrowthSection({
                     <div className="font-aeonik text-base text-[#E8ECF0]/70 leading-relaxed max-w-3xl">
                         {description}
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Features Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {features.map((feature, index) => (
-                        <div
+                        <motion.div
                             key={index}
                             className="bg-[#212327]/40 border border-white/5 rounded-[24px] p-10 flex flex-col items-start gap-12 transition-all duration-300 hover:bg-[#212327]/60 hover:border-white/10 group h-full"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
 
                             <Image
@@ -122,7 +133,7 @@ export default function GrowthSection({
                                     {feature.description}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

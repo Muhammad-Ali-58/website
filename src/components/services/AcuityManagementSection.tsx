@@ -73,6 +73,8 @@ const MANAGEMENT_CARDS = [
     }
 ];
 
+import { motion } from 'framer-motion';
+
 export default function AcuityManagementSection() {
     const swiperRef = useRef<SwiperType | null>(null);
     const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -84,7 +86,13 @@ export default function AcuityManagementSection() {
 
     return (
         <section className="bg-white py-24 sm:py-32 overflow-hidden">
-            <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
+            <motion.div
+                className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
 
                 {/* Header Section */}
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-20">
@@ -180,7 +188,7 @@ export default function AcuityManagementSection() {
                     ))}
                 </Swiper>
 
-            </div>
+            </motion.div>
 
             {/* Floating 'Book a call' button */}
             <div className="fixed bottom-10 right-10 z-[100] group hidden md:block">

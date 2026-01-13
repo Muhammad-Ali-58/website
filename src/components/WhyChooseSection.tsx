@@ -45,7 +45,7 @@ export default function WhyChooseSection() {
         {/* Header with Navigation */}
         <motion.div
           className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -86,8 +86,8 @@ export default function WhyChooseSection() {
 
         {/* Swiper Content Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >

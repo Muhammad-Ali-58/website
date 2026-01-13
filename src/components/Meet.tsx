@@ -116,8 +116,8 @@ export default function MeetSam() {
           {/* Left Content */}
           <motion.div
             className="space-y-8"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -179,8 +179,8 @@ export default function MeetSam() {
           {/* Right Image Content */}
           <motion.div
             className="relative mx-auto w-full max-w-[600px] lg:mr-0 lg:max-w-none"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >

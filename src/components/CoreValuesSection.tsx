@@ -5,8 +5,8 @@ import { useState } from 'react';
 const values = [
     {
         id: 1,
-        title: 'Innovation and Adaptability',
-        description: 'We embrace change and continuously evolve, ensuring our solutions stay ahead in a dynamic world.',
+        title: 'Clarity Over Noise',
+        description: 'We believe most software problems come from unclear thinking, not lack of tools. We take time upfront to understand the problem, ask uncomfortable questions when needed, and make decisions that reduce complexity instead of adding to it. Clear scope, clear ownership, and clear communication are part of how we protect projects from drifting or breaking later.',
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9.00003 12.75L12.554 16.307C12.835 16.588 13.292 16.588 13.573 16.307L18 11.88C18.666 11.214 18.666 10.134 18 9.46797L13.5 4.96797C12.834 4.30097 11.754 4.30097 11.088 4.96797L9.00003 7.05697" />
@@ -18,8 +18,8 @@ const values = [
     },
     {
         id: 2,
-        title: 'Quality and Consistency',
-        description: 'Delivering excellence is our priority. We maintain high standards to ensure reliability and lasting impact.',
+        title: 'Quality That Holds Up',
+        description: 'We care about how software behaves months and years after launch. That means clean code, sensible architecture, and decisions that make systems easier to maintain, not harder. We avoid rushing work just to ship faster. Consistency and reliability matter more than shortcuts.',
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="8" r="6" />
@@ -30,8 +30,8 @@ const values = [
     },
     {
         id: 3,
-        title: 'Authentic Connections',
-        description: 'Collaboration is at the heart of what we do. By building genuine relationships with our clients and fellow designers, we create a space for honest feedback, innovative ideas.',
+        title: 'Adaptability With Purpose',
+        description: 'Technology changes quickly. We stay current, but we do not chase trends blindly. New tools and approaches are evaluated based on whether they solve a real problem for the product. This applies especially to AI. We use it where it adds value and leave it out where it does not.',
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
@@ -39,7 +39,21 @@ const values = [
             </svg>
         ),
     },
+    {
+        id: 4,
+        title: 'Real Partnerships',
+        description: 'We work best when there is mutual trust. That means honest timelines, direct feedback, and shared responsibility for outcomes. Our clients are not treated as tickets in a queue. We stay involved, communicate openly, and care about the success of what we build together.',
+        icon: (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22L12 19L7 22L8.523 12.89" />
+                <circle cx="12" cy="8" r="2" />
+            </svg>
+        ),
+    },
 ];
+
+import { motion } from 'framer-motion';
 
 export default function CoreValuesSection() {
     const [openId, setOpenId] = useState<number | null>(1);
@@ -50,7 +64,13 @@ export default function CoreValuesSection() {
 
     return (
         <section className="bg-white px-6 py-10 lg:py-20 lg:px-8 xl:px-12">
-            <div className="mx-auto max-w-[1600px]">
+            <motion.div
+                className="mx-auto max-w-[1600px]"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
 
                 {/* Top Badge (Only visible on mobile if needed, but design puts it with title) */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
@@ -63,7 +83,7 @@ export default function CoreValuesSection() {
                         </div>
 
                         <h2 className="font-aeonik text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.1] tracking-tight text-[#181A1D] max-w-xl">
-                            Core Values That Shape Every Project And Partnership
+                            What Guides Our Work
                         </h2>
                     </div>
 
@@ -132,7 +152,7 @@ export default function CoreValuesSection() {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

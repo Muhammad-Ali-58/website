@@ -222,13 +222,19 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Scrolling Rows with Edge Fade */}
-      <div className="relative flex flex-col gap-6 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      <motion.div
+        className="relative flex flex-col gap-6 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+      >
         {/* Row 1 */}
         <InfiniteCarousel testimonials={TESTIMONIALS_ROW_1} speed={13} />
 
         {/* Row 2 */}
         <InfiniteCarousel testimonials={TESTIMONIALS_ROW_2} speed={16} />
-      </div>
+      </motion.div>
 
       {/* Footer CTA Pill */}
       <motion.div

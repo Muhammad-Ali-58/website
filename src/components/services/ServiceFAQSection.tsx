@@ -50,12 +50,20 @@ interface ServiceFAQSectionProps {
     items?: { question: string; answer: string }[];
 }
 
+import { motion } from 'framer-motion';
+
 export default function ServiceFAQSection({ items = SERVICE_FAQS }: ServiceFAQSectionProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
         <section className="bg-white py-16 sm:py-24">
-            <div className="mx-auto max-w-[1500px] px-6 lg:px-8 xl:px-12">
+            <motion.div
+                className="mx-auto max-w-[1500px] px-6 lg:px-8 xl:px-12"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
 
                 {/* Header */}
                 <div className="flex flex-col items-center text-center lg:mb-24">
@@ -87,7 +95,7 @@ export default function ServiceFAQSection({ items = SERVICE_FAQS }: ServiceFAQSe
                         />
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

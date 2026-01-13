@@ -1,13 +1,20 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function AboutHeroSection() {
   return (
     <section className="relative min-h-screen w-full bg-[#181A1D] py-20 overflow-hidden flex flex-col justify-center">
 
       {/* Container */}
-      <div className="w-full relative z-10 grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-8 items-center">
+      <motion.div
+        className="w-full relative z-10 grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-8 items-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
 
         {/* Left Image (Tall) */}
         <div className="block col-span-1 lg:col-span-3 order-2 lg:order-none relative h-[300px] lg:h-[600px] rounded-lg lg:-translate-y-26 mt-8 lg:mt-0">
@@ -43,9 +50,6 @@ export default function AboutHeroSection() {
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
             }}>
-            Hi, I’m Sam.
-            <br />
-            A{' '}
             <span className="relative inline-block px-6 py-2 mx-2">
               <span
                 className="relative z-10"
@@ -56,7 +60,7 @@ export default function AboutHeroSection() {
                   backgroundClip: 'text',
                 }}
               >
-                Squarespace
+                We Build
               </span>
               <span className="absolute inset-0 z-0 w-full h-full">
                 <Image
@@ -68,13 +72,19 @@ export default function AboutHeroSection() {
                 />
               </span>
             </span>{' '}
-            Expert.
+            Software That Teams Can Rely On
           </h1>
 
           {/* Description */}
           <div className="max-w-2xl mx-auto mb-12">
             <p className="font-aeonik text-base sm:text-lg text-gray-300 leading-relaxed">
-              I’m your go-to guy for crafting captivating digital experiences on Squarespace and teaching others how to do the same. As an official Squarespace Expert, Partner, and Community Leader, I bring unparalleled expertise to the table. With a track record of delivering over 700 websites, I’m not just a designer—I’m a strategist, educator, and <span className="underline decoration-white/30 underline-offset-4">mentor to a thriving community</span> of 200+ Squarespace designers worldwide.
+              Codefinity Solutions is a product focused software development company built by engineers who care about how software holds up after launch.
+              <br />
+              <br />
+              We started small and grew quickly by doing the work properly. Clear planning. Strong execution. Ownership at every stage. Today, our team builds web, mobile, and AI driven products for companies that want systems they can trust, scale, and improve over time.
+              <br />
+              <br />
+              We are not tied to trends or templates. We focus on understanding the problem, choosing the right tools, and building software that works in real conditions with real users.
             </p>
           </div>
 
@@ -86,7 +96,7 @@ export default function AboutHeroSection() {
           </button>
 
           {/* Awards */}
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center">
+          {/* <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center">
             <div className="relative w-24 h-24 md:w-32 md:h-32">
               <Image src="/marketplace.webp" alt="Squarespace Marketplace Expert" fill className="object-contain" />
             </div>
@@ -96,7 +106,7 @@ export default function AboutHeroSection() {
             <div className="relative w-24 h-24 md:w-32 md:h-32">
               <Image src="/member.webp" alt="Squarespace Circle Member" fill className="object-contain" />
             </div>
-          </div>
+          </div> */}
 
         </div>
 
@@ -112,7 +122,7 @@ export default function AboutHeroSection() {
           </div>
         </div>
 
-      </div>
+      </motion.div>
       {/* Floating Element Bottom Left */}
       <div className="absolute bottom-0 left-0 w-[280px] h-[140px] hidden xl:block rounded-lg overflow-hidden">
         <Image src="/about-us/hero-about-3.webp" alt="Detail" fill className="object-cover" />

@@ -11,6 +11,8 @@ interface PlatformSelectionSectionProps {
     buttonText?: string;
 }
 
+import { motion } from 'framer-motion';
+
 export default function PlatformSelectionSection({
     title,
     description,
@@ -26,7 +28,13 @@ export default function PlatformSelectionSection({
 
     return (
         <section className="bg-white py-12 sm:py-16">
-            <div className="max-w-[1600px] mx-auto px-6 lg:px-12 xl:px-16">
+            <motion.div
+                className="max-w-[1600px] mx-auto px-6 lg:px-12 xl:px-16"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
                 <div className="bg-[#516C83] rounded-[18px] overflow-hidden p-4 sm:p-4 lg:p-6 xl:p-8">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
 
@@ -87,7 +95,7 @@ export default function PlatformSelectionSection({
 
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

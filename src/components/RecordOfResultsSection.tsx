@@ -6,21 +6,21 @@ import { motion } from 'framer-motion';
 const stats = [
     {
         id: 1,
-        title: 'Years of Experience',
-        value: '10+',
-        description: 'Helping clients stay ahead with modern, responsive, and engaging digital experiences.',
+        title: 'Products Shipped',
+        value: '52+',
+        description: 'Products built and actively running in production across different industries and stages.',
     },
     {
         id: 2,
-        title: 'Referral Rate',
-        value: '60%',
-        description: 'New clients come from referrals, showing the confidence our clients have in recommending us.',
+        title: 'Years of Hands-On Delivery',
+        value: '3+',
+        description: 'Years of focused experience delivering web, mobile, AI, and infrastructure solutions with consistency.',
     },
     {
         id: 3,
         title: 'Client Satisfaction',
         value: '100%',
-        description: 'Our client-focused approach has led to consistent high ratings and satisfaction.',
+        description: 'Every client we currently work with continues to trust us with their product and development needs.',
     },
 ];
 
@@ -85,7 +85,7 @@ export default function RecordOfResultsSection() {
                 <div className="mx-auto max-w-[1600px]">
                     <motion.div
                         className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
@@ -96,7 +96,7 @@ export default function RecordOfResultsSection() {
                             {/* Badge */}
                             <div className="mb-8 inline-flex items-center rounded-full bg-[#BEC8D1] px-4 py-1.5">
                                 <span className="h-1.5 w-1.5 rounded-full bg-[#506C83] mr-2"></span>
-                                <span className="font-aeonik text-xs font-medium text-[#506C83]">Our Values</span>
+                                <span className="font-aeonik text-xs font-medium text-[#506C83]">Our track record</span>
                             </div>
 
                             {/* Heading */}
@@ -106,7 +106,7 @@ export default function RecordOfResultsSection() {
 
                             {/* Description */}
                             <p className="font-aeonik text-sm sm:text-base text-[#4B5563] leading-relaxed max-w-2xl">
-                                Driven by our passion for excellence and supported by our incredible clients, our work has delivered impactful results across industries. Here’s a look at the milestones that showcase our dedication and the success of our partnerships.
+                                Our growth has come from doing the work properly and standing behind it. These numbers reflect real products shipped, long-term client relationships, and systems that continue to run in production.
                             </p>
                         </div>
 
@@ -133,7 +133,7 @@ export default function RecordOfResultsSection() {
                             <motion.div
                                 key={stat.id}
                                 className="bg-white rounded-[24px] p-8 lg:p-10 shadow-sm border border-black/5 flex flex-col h-full"
-                                initial={{ opacity: 0, y: 30 }}
+                                initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.15 }}

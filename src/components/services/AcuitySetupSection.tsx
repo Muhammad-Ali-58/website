@@ -1,12 +1,19 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function AcuitySetupSection() {
     return (
         <section className="bg-[#17181B] py-20 lg:py-28 overflow-hidden">
             <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20">
-                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 xl:gap-32">
+                <motion.div
+                    className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 xl:gap-32"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
 
                     {/* Left Column: Content */}
                     <div className="w-full lg:w-[50%] flex flex-col items-start gap-8">
@@ -88,7 +95,7 @@ export default function AcuitySetupSection() {
                         </div>
                     </div>
 
-                </div>
+                </motion.div>
             </div>
         </section>
     );

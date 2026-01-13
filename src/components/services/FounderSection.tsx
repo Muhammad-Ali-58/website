@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function FounderSection() {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -9,7 +10,13 @@ export default function FounderSection() {
 
     return (
         <section className="relative w-full bg-[#E8ECF0]/30 py-10 lg:py-18">
-            <div className="max-w-[1240px] mx-auto px-6 lg:px-12 flex flex-col items-center text-center">
+            <motion.div
+                className="max-w-[1240px] mx-auto px-6 lg:px-12 flex flex-col items-center text-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
 
                 {/* Content Header */}
                 <div className="flex flex-col items-center mb-16">
@@ -100,7 +107,7 @@ export default function FounderSection() {
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
         </section>
     );
 }

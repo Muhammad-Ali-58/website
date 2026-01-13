@@ -80,7 +80,7 @@ export default function ServicesSection() {
         {/* Header */}
         <motion.div
           className="mb-20 flex flex-col justify-between gap-8 lg:flex-row lg:items-end"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -173,8 +173,8 @@ function ServiceCard({ service, className = '' }: { service: typeof SERVICES[0],
   return (
     <motion.div
       className={`group relative flex flex-col overflow-hidden rounded-3xl bg-[#181a1d] border border-white/5 h-full ${className}`}
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       whileHover={{

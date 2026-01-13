@@ -4,6 +4,7 @@ import React from 'react';
 import Header from '../Header';
 import ContactForm from '../molecules/ContactForm';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function AcuityHeroSection() {
     return (
@@ -12,7 +13,13 @@ export default function AcuityHeroSection() {
             <Header isLight={true} />
 
             <div className="flex-1 w-full max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10 flex flex-col justify-center py-20 lg:py-24">
-                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 xl:gap-32">
+                <motion.div
+                    className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 xl:gap-32"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
 
                     {/* Left Content */}
                     <div className="w-full lg:w-[50%] flex flex-col items-start gap-8">
@@ -72,7 +79,7 @@ export default function AcuityHeroSection() {
                         <ContactForm />
                     </div>
 
-                </div>
+                </motion.div>
             </div>
         </section>
     );

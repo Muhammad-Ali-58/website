@@ -107,10 +107,18 @@ const FEATURES: FeatureItem[] = [
     }
 ];
 
+import { motion } from 'framer-motion';
+
 export default function AcuityServiceFeatures() {
     return (
         <section className="bg-white py-24 sm:py-32 overflow-hidden">
-            <div className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 flex flex-col items-center">
+            <motion.div
+                className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 flex flex-col items-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
 
                 {/* Header */}
                 <div className="flex flex-col items-center mb-16 text-center">
@@ -148,7 +156,7 @@ export default function AcuityServiceFeatures() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

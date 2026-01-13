@@ -1,11 +1,16 @@
 'use client';
-
-import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function StartProjectSection() {
     return (
         <section className="bg-white py-12 lg:py-24 px-4 sm:px-8 lg:px-16 xl:px-24">
-            <div className="mx-auto max-w-[1920px]">
+            <motion.div
+                className="mx-auto max-w-[1920px]"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
 
                 {/* Main Card */}
                 {/* Main Card */}
@@ -131,7 +136,7 @@ export default function StartProjectSection() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }
