@@ -59,8 +59,6 @@ export default function MobileApplicationPage() {
                 }
                 description={"We build mobile applications that are stable, scalable, and ready for real-world usage. From early-stage apps to production systems with growing user bases, we focus on performance, reliability, and clean integration with your backend. \n\n Our approach prioritizes long-term usability over rushed releases, so your app continues to perform as it grows."}
                 imageSrc="/services-section/seo-hero-img.webp"
-                titleClassName="text-3xl sm:text-4xl lg:text-4xl"
-                descriptionClassName="text-base"
                 sectionBgColor="#516C83"
                 imageOpacity={0.5}
             />

@@ -24,11 +24,11 @@ export default function AcuitySetupSection() {
                             }}
                         >
                             <span className="h-1.5 w-1.5 rounded-full bg-white mr-2"></span>
-                            <span className="font-aeonik text-xs font-medium text-white uppercase tracking-wider">Design services</span>
+                            <span className="font-aeonik text-xs font-medium text-white uppercase tracking-wider">Team augmentation</span>
                         </div>
 
                         {/* Heading */}
-                        <h2 className="font-aeonik text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-normal leading-[1.1] tracking-tight max-w-2xl"
+                        <h2 className="font-aeonik text-3xl sm:text-3xl lg:text-3xl xl:text-4xl font-normal leading-[1.1] tracking-tight max-w-2xl"
                             style={{
                                 backgroundImage: 'linear-gradient(94.13deg,#e8ecf0 .14%,#506c83 153.8%)',
                                 WebkitBackgroundClip: 'text',
@@ -37,23 +37,24 @@ export default function AcuitySetupSection() {
                                 color: 'transparent'
                             }}
                         >
-                            Acuity Scheduling Setup <br />& Styling For Squarespace
+                            Dedicated Team Augmentation
+                            Built to Fit Your Product
                         </h2>
 
                         {/* Description */}
                         <div className="space-y-6 max-w-xl">
                             <p className="font-aeonik text-base font-medium text-white">
-                                Clean – clear – completely on brand.
+                                Clean collaboration. Clear ownership. Fully aligned with your workflow.
                             </p>
                             <div className="space-y-4 font-aeonik text-white/70 leading-relaxed text-sm sm:text-base">
                                 <p>
-                                    This service connects Acuity Scheduling to your Squarespace site in a way that feels native (no awkward buttons – no confusing flows).
+                                    This service embeds experienced engineers directly into your product team, working inside your tools, processes, and delivery rhythm. No silos. No hand-offs. Just people who understand how real products are built and shipped.
                                 </p>
                                 <p>
-                                    Whether you offer coaching, consulting, therapy, or run a salon – we’ll set up your Squarespace booking system so it matches your brand style & makes booking simple.
+                                    Whether you need frontend support, backend depth, or full-stack execution, we match you with developers who align with your stack, communication style, and expectations from day one.
                                 </p>
                                 <p>
-                                    We work with online businesses, service providers, studio owners & creatives. If you’re looking for a professional Squarespace appointment scheduler that looks great & works hard – you’re in the right place.
+                                    We work with startups, scale-ups, and product teams that want speed without sacrificing quality. If you’re looking for a reliable extension of your internal team that delivers consistently and takes ownership, you’re in the right place.
                                 </p>
                             </div>
                         </div>
@@ -69,7 +70,7 @@ export default function AcuitySetupSection() {
                         </button>
 
                         {/* Awards */}
-                        <div className="flex flex-nowrap items-center gap-4 sm:gap-8 mt-4 overflow-x-auto no-scrollbar">
+                        {/* <div className="flex flex-nowrap items-center gap-4 sm:gap-8 mt-4 overflow-x-auto no-scrollbar">
                             <div className="relative w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] flex-shrink-0">
                                 <Image src="/marketplace.webp" alt="Marketplace Expert" fill className="object-contain" />
                             </div>
@@ -79,7 +80,7 @@ export default function AcuitySetupSection() {
                             <div className="relative w-[80px] h-[80px] sm:w-[110px] sm:h-[110px] flex-shrink-0">
                                 <Image src="/member.webp" alt="Circle Member" fill className="object-contain" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right Column: Image */}

@@ -10,8 +10,8 @@ interface FeatureItem {
 
 const FEATURES: FeatureItem[] = [
     {
-        title: "Free Setup Consultation",
-        description: "Let's start with a no-pressure call. I'll look at what you have now – if anything – and map out how to build a better Squarespace appointment scheduler that works for you.",
+        title: "Free Scoping Call",
+        description: "We start with a focused call to understand your product, current team setup, and delivery gaps. You bring the context. We help define where augmentation actually adds value.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -21,8 +21,8 @@ const FEATURES: FeatureItem[] = [
         )
     },
     {
-        title: "Recognized Squarespace Expert",
-        description: "I've helped 700+ Squarespace websites go live – many with Acuity Scheduling. As a trusted expert & educator, I bring real experience to every setup.",
+        title: "Experienced Product Engineers",
+        description: "Our engineers are not freelancers dropped into tickets. They have real product experience and know how to work inside existing codebases, roadmaps, and delivery cycles.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 15l-2 5L9 9l11 4-5 2zm0 0l4 4"></path>
@@ -30,8 +30,8 @@ const FEATURES: FeatureItem[] = [
         )
     },
     {
-        title: "Tried – Tested – Booked",
-        description: "This isn't just about getting Acuity live. It's about building a booking system that actually gets used – that matches your flow – and feels like part of your brand.",
+        title: "Proven in Live Environments",
+        description: "This is not theoretical staffing. Our teams have shipped features, handled production systems, and worked inside fast-moving product orgs with real users and real deadlines.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
@@ -44,8 +44,8 @@ const FEATURES: FeatureItem[] = [
         )
     },
     {
-        title: "Clients Keep Coming Back",
-        description: "People love working with me because I keep it simple. Quick replies – zero jargon – and no half-finished projects.",
+        title: "Teams That Stay Consistent",
+        description: "You work with the same people, not rotating resources. That means retained context, faster execution, and fewer mistakes over time.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
@@ -53,8 +53,8 @@ const FEATURES: FeatureItem[] = [
         )
     },
     {
-        title: "Unlimited Revisions Until It Feels Right",
-        description: "From button colors to wording on confirmation emails – we'll tweak until everything feels right.",
+        title: "Iteration Until It Works",
+        description: "If something is not clicking, we adjust. Roles, responsibilities, or scope can evolve as the product evolves. The goal is long-term fit, not short-term coverage.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M10 12c-2.67 0-4-3-4-3s1.33-3 4-3 4 3 4 3-1.33 3-4 3Z"></path>
@@ -63,8 +63,8 @@ const FEATURES: FeatureItem[] = [
         )
     },
     {
-        title: "Branded Look & Feel",
-        description: "No generic widgets here. Your Squarespace booking plugin will be styled to match your fonts, colors & layout – so it fits right in.",
+        title: "Aligned With Your Standards",
+        description: "We adapt to your coding practices, documentation style, review process, and communication norms so the team feels internal, not external.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path>
@@ -74,8 +74,8 @@ const FEATURES: FeatureItem[] = [
         )
     },
     {
-        title: "Connected To Your Tools",
-        description: "From Zoom & Google Calendar to email lists & payment systems – I'll make sure your Squarespace Acuity setup works with what you're already using.",
+        title: "Integrated Into Your Tooling",
+        description: "We work inside your existing stack and tools including repos, project management, CI, and communication channels. No parallel systems. No friction.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
@@ -84,8 +84,8 @@ const FEATURES: FeatureItem[] = [
         )
     },
     {
-        title: "Built With Visibility In Mind",
-        description: "Every page includes foundational SEO so your service shows up in searches for online appointment scheduling or Squarespace calendar booking.",
+        title: "Built for Delivery Visibility",
+        description: "Clear ownership, predictable output, and transparent progress. You always know who is working on what and why.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
@@ -96,8 +96,8 @@ const FEATURES: FeatureItem[] = [
         )
     },
     {
-        title: "Support That Sticks Around",
-        description: "Need help after launch? No problem. I offer ongoing support options so your booking system doesn't fall apart the moment something changes.",
+        title: "Support Beyond Onboarding",
+        description: "We stay involved after ramp-up to handle scaling needs, performance feedback, and continuity so the team remains effective as requirements change.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
@@ -128,7 +128,7 @@ export default function AcuityServiceFeatures() {
                     </div>
 
                     <h2 className="font-aeonik text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-normal leading-tight text-[#1E293B] max-w-4xl">
-                        What Makes This Acuity Scheduling Service Different
+                        What Makes Our Team Augmentation Different
                     </h2>
                 </div>
 

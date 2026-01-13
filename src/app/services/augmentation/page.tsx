@@ -1,12 +1,10 @@
 import AcuityHeroSection from '@/components/services/AcuityHeroSection';
 import LatestWork from '@/components/LatestWork';
-import ClientMarquee from '@/components/ClientMarquee';
-import GrowthSection from '@/components/services/GrowthSection';
-import ServiceWhyChooseSection from '@/components/services/ServiceWhyChooseSection';
-import WhoAmISection from '@/components/services/WhoAmISection';
-import PlatformSelectionSection from '@/components/services/PlatformSelectionSection';
-import ServiceFAQSection from '@/components/services/ServiceFAQSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import AcuitySetupSection from '@/components/services/AcuitySetupSection';
+import AcuityServiceFeatures from '@/components/services/AcuityServiceFeatures';
+import BlogSection from '@/components/BlogSection';
+import ContactSection from '@/components/ContactSection';
 
 const ACUITY_FEATURES = [
     {
@@ -78,34 +76,16 @@ const ACUITY_FAQS = [
     }
 ];
 
-import AcuityProjectSection from '@/components/services/AcuityProjectSection';
-import FounderSection from '@/components/services/FounderSection';
-import AcuitySetupSection from '@/components/services/AcuitySetupSection';
-import AcuityServiceFeatures from '@/components/services/AcuityServiceFeatures';
-import AcuityManagementSection from '@/components/services/AcuityManagementSection';
-import AcuityAuthorSection from '@/components/services/AcuityAuthorSection';
-import AcuityProcessSection from '@/components/services/AcuityProcessSection';
-
 export default function AcuitySchedulingPage() {
     return (
         <main className="min-h-screen bg-white text-[#1E293B]">
             <AcuityHeroSection />
-            <ClientMarquee />
             <AcuitySetupSection />
             <LatestWork />
             <TestimonialsSection />
-            <FounderSection />
             <AcuityServiceFeatures />
-            <AcuityManagementSection />
-            <AcuityAuthorSection />
-            <AcuityProcessSection />
-            <PlatformSelectionSection
-                title="The Scheduling Strategy"
-                description="Download our free guide on how to optimize your booking flow to increase appointment volume and reduce no-shows."
-                imageSrc="/services-section/platform.webp"
-            />
-            <AcuityProjectSection />
-            <ServiceFAQSection items={ACUITY_FAQS} />
+            <ContactSection />
+            <BlogSection />
         </main>
     );
 }

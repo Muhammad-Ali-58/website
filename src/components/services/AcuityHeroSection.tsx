@@ -37,28 +37,26 @@ export default function AcuityHeroSection() {
 
                         {/* Heading */}
                         <h1 className="font-aeonik text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-normal leading-[1.1] tracking-tight text-[#1E293B]">
-                            Acuity Scheduling For<br />
-                            Squarespace Websites |<br />
-                            <span className="relative inline-block mt-2">
-                                <span className="relative z-10">by Crawford</span>
-                                <div className="absolute inset-0 -m-1 border border-black/10 rounded-lg pointer-events-none"></div>
-                            </span>
+                            Dedicated Development Teams by Codefinity
                         </h1>
 
                         {/* Description Section */}
                         <div className="space-y-6 max-w-xl">
                             <p className="font-aeonik text-lg font-medium text-[#1E293B]">
-                                Book Smarter – Look Polished – Save Time
+                                Scale faster. Ship consistently. Stay in control.
                             </p>
                             <div className="space-y-4 font-aeonik text-[#1E293B]/70 leading-relaxed text-base sm:text-lg">
                                 <p>
-                                    Online scheduling doesn’t have to look clunky or feel disconnected from your brand. Acuity Scheduling for Squarespace lets clients book straight from your site (no back-and-forth emails – no off-brand popups).
+                                    Hiring shouldn’t slow your product down. Our team augmentation model gives you access to experienced developers who plug directly into your workflow and work as an extension of your internal team.
                                 </p>
                                 <p>
-                                    Whether you’re a coach, consultant, or run a wellness studio – this setup creates a seamless booking flow that works with how you run your business.
+                                    Whether you need to speed up delivery, cover skill gaps, or scale without long-term hiring risk, we provide engineers who understand real-world product development and take ownership from day one.
+                                </p>
+                                <p>
+                                    No handoffs. No friction. Just focused execution.
                                 </p>
                                 <p className="font-medium text-[#1E293B]">
-                                    Built-in design. Built-in confidence.
+                                    Your roadmap. Our people. One team.
                                 </p>
                             </div>
                         </div>

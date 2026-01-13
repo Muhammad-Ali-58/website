@@ -11,8 +11,6 @@ interface ServiceHeroSectionProps {
     description: React.ReactNode;
     imageSrc: string;
     bgImageSrc?: string;
-    titleClassName?: string;
-    descriptionClassName?: string;
     sectionBgColor?: string;
     imageOpacity?: number;
 }
@@ -23,8 +21,6 @@ export default function ServiceHeroSection({
     description,
     imageSrc,
     bgImageSrc = '/bg-gradient.webp',
-    titleClassName = 'text-4xl sm:text-5xl lg:text-6xl',
-    descriptionClassName = 'text-lg',
     sectionBgColor = '#181A1D',
     imageOpacity = 1
 }: ServiceHeroSectionProps) {
@@ -72,12 +68,12 @@ export default function ServiceHeroSection({
                         </div>
 
                         {/* Heading */}
-                        <h1 className={`font-aeonik font-normal leading-[1.1] tracking-tight ${titleClassName}`}>
+                        <h1 className="font-aeonik font-normal leading-[1.1] tracking-tight text-4xl sm:text-5xl lg:text-6xl">
                             {title}
                         </h1>
 
                         {/* Description */}
-                        <div className={`font-aeonik text-[#E8ECF0]/80 leading-relaxed max-w-xl whitespace-pre-line ${descriptionClassName}`}>
+                        <div className="font-aeonik text-[#E8ECF0]/80 leading-relaxed max-w-xl whitespace-pre-line text-lg">
                             {description}
                         </div>
 
