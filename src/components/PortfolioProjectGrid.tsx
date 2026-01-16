@@ -46,36 +46,36 @@ const PORTFOLIO_PROJECTS = [
 export default function PortfolioProjectGrid() {
     return (
         <section className="bg-white py-8 lg:py-16">
-            <div className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-8 space-y-8 lg:space-y-12">
+            <div className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 space-y-8 lg:space-y-12">
                 {PORTFOLIO_PROJECTS.map((project, index) => (
                     <motion.div
                         key={index}
-                        className="relative rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-1.5 sm:p-2 bg-[#ECECEC] overflow-hidden group"
+                        className="relative rounded-[18px] sm:rounded-[12px] p-1.5 sm:p-2 bg-[#ECECEC] overflow-hidden group"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: index * 0.1 }}
                     >
-                        <div className="bg-white rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] overflow-hidden flex flex-col lg:flex-row items-stretch min-h-[480px]">
+                        <div className="bg-white rounded-[18px] sm:rounded-[12px] overflow-hidden flex flex-col gap-6 lg:flex-row items-stretch min-h-[480px]">
                             {/* Image Section */}
                             <div className="lg:flex-[3] relative min-h-[300px] lg:min-h-0">
-                                <div className="absolute inset-6 sm:inset-8 rounded-[16px] overflow-hidden border border-[#ECECEC] shadow-sm">
+                                <div className="absolute inset-4 rounded-[10px] overflow-hidden">
                                     <Image
                                         src={project.image}
                                         alt={project.title}
                                         fill
-                                        className="object-cover"
+                                        className="object-fit"
                                     />
                                 </div>
                             </div>
 
                             {/* Content Section */}
-                            <div className="lg:flex-[4] p-6 sm:p-10 lg:p-12 flex flex-col items-start justify-center gap-3">
+                            <div className="lg:flex-[5] flex flex-col items-start justify-center gap-6 lg:mr-4">
                                 <Badge variant='default' size='sm' className="bg-[#EDF2F6] text-[#64748B] border-none">
                                     {project.tag}
                                 </Badge>
 
-                                <Heading level={2} size='lg' className="text-[#1E293B]">
+                                <Heading level={2} size='md' className="text-[#1E293B]">
                                     {project.title}
                                 </Heading>
 
@@ -87,7 +87,7 @@ export default function PortfolioProjectGrid() {
                                     ))}
                                 </div>
 
-                                <div className="mt-2">
+                                <div className="mt-6">
                                     <Button
                                         variant='cta'
                                         size='md'
