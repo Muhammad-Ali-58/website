@@ -25,7 +25,7 @@ export default function FAQItem({
     questionClassName = 'text-lg sm:text-xl font-normal text-[#181A1D]',
     answerClassName = 'text-base sm:text-lg text-[#181A1D]/70',
     buttonClassName = 'py-8',
-    iconContainerClassName = 'bg-[#506C83] text-white',
+    iconContainerClassName = 'bg-[#506C83] text-white h-12 w-12',
     borderClassName = 'border-gray-200',
     maxHeight = '500px'
 }: FAQItemProps) {
@@ -39,7 +39,7 @@ export default function FAQItem({
                     {question}
                 </span>
                 <div
-                    className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${iconContainerClassName} ${isOpen ? '' : 'hover:scale-105'}`}
+                    className={`flex flex-shrink-0 items-center justify-center rounded-full transition-all duration-300 ${iconContainerClassName} ${isOpen ? '' : 'hover:scale-105'}`}
                 >
                     {isOpen ? (
                         <HiMinus className="h-6 w-6" />

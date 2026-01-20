@@ -111,7 +111,7 @@ export default function FAQSection() {
                   answerClassName="text-sm sm:text-base text-[#181A1D]/60"
                   borderClassName="border-[#BDC6CE]"
                   maxHeight="1200px"
-                  iconContainerClassName={`bg-[#516C83] text-white ${openIndex === index ? '' : 'bg-[#516C83]/80'}`}
+                  iconContainerClassName={`h-12 w-12 bg-[#516C83] text-white ${openIndex === index ? '' : 'bg-[#516C83]/80'}`}
                 />
               ))}
             </div>
