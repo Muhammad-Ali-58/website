@@ -8,6 +8,8 @@ import LatestWork from '@/components/LatestWork';
 import ClientMarquee from '@/components/ClientMarquee';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import AgencyProcessSection from '@/components/AgencyProcessSection';
+import FounderSection from '@/components/FounderSection';
+import SupportSection from '@/components/SupportSection';
 
 export default function AgencyPage() {
     return (
@@ -15,8 +17,10 @@ export default function AgencyPage() {
             <AgencyHero />
             <LatestWork />
             <ClientMarquee />
-            <TestimonialsSection />
+            <FounderSection />
             <AgencyProcessSection />
+            <SupportSection />
+            <TestimonialsSection />
             <ContactSection />
             <BlogSection />
             <Footer />
