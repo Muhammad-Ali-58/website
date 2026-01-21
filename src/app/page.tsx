@@ -46,7 +46,7 @@ export default function Home() {
       <ServicesSection />
       <PricingSection />
       <IntegrationsSection />
-      <WhyChooseSection 
+      <WhyChooseSection
         badgeText='Why Codefinity Solutions'
         title='Why Teams Choose CFS'
         description='You are not just hiring developers. You are choosing how your product is built, maintained, and scaled. Here is what working with Codefinity Solutions actually looks like.'
