@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper';
@@ -8,7 +8,6 @@ import { Navigation } from 'swiper/modules';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -23,7 +22,7 @@ const PROCESS_STEPS = [
             "Collection of assets",
             "Project 'hub' setup"
         ],
-        image: "/services-section/process-1.webp"
+        image: "/agency-process-1.webp"
     },
     {
         number: "02",
@@ -34,7 +33,7 @@ const PROCESS_STEPS = [
             "Target feedback round using bespoke feedback software",
             "We repeat this until you're 100% satisfied with your Squarespace website design and beautiful website"
         ],
-        image: "/services-section/process-2.webp"
+        image: "/agency-process-2.webp"
     },
     {
         number: "03",
@@ -47,19 +46,19 @@ const PROCESS_STEPS = [
             "30 days of free email assistance",
             "Ownership handover"
         ],
-        image: "/services-section/process-3.webp"
+        image: "/agency-process-3.webp"
     }
 ];
 
 import { motion } from 'framer-motion';
 
-export default function AcuityProcessSection() {
+export default function AgencyProcessSection() {
     const swiperRef = useRef<SwiperType | null>(null);
 
     return (
-        <section className="bg-[#D1D7DD] py-12 sm:py-12 overflow-hidden mt-10">
+        <section className="bg-[#D1D7DD] py-12 overflow-hidden mt-10">
             <motion.div
-                className="max-w-[1700px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20"
+                className="max-w-[1700px] mx-auto px-6 lg:px-12"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -67,27 +66,17 @@ export default function AcuityProcessSection() {
             >
 
                 {/* Header Section */}
-                <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
-                    <div className="max-w-4xl">
-                        {/* Badge */}
-                        <div className="inline-flex items-center rounded-full px-5 py-2 bg-[#AEBAC4] text-[#1E293B] mb-8">
-                            <span className="h-1.5 w-1.5 rounded-full bg-[#1E293B] mr-3"></span>
-                            <span className="font-aeonik text-xs font-medium uppercase tracking-widest">Process</span>
-                        </div>
-
-                        {/* Heading */}
-                        <h2 className="font-aeonik text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.1] text-[#1E293B] tracking-tight">
-                            Our 3-Step Process For<br />
-                            Setting Up Acuity Scheduling<br />
-                            On Squarespace
-                        </h2>
+                <div className="flex flex-col justify-center items-center gap-4 mb-10">
+                    {/* Badge */}
+                    <div className="inline-flex items-center rounded-full px-5 py-2 bg-[#AEBAC4] text-[#1E293B]">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#1E293B] mr-3"></span>
+                        <span className="font-aeonik text-xs font-medium uppercase">Process</span>
                     </div>
 
-                    <div className="max-w-xl self-end">
-                        <p className="font-aeonik text-lg text-[#1E293B]/60 leading-relaxed">
-                            We specialize in setting up Acuity Scheduling that doesn't just work – it works with your brand, your hours & your clients. Every setup is built to streamline your online appointment scheduling, make your calendar easier to manage & help clients book without friction.
-                        </p>
-                    </div>
+                    {/* Heading */}
+                    <h2 className="font-aeonik text-4xl lg:text-5xl font-normal text-[#1E293B] tracking-tight">
+                        Our Simple and Streamlined Process
+                    </h2>
                 </div>
 
                 {/* Swiper Carousel */}
@@ -102,12 +91,12 @@ export default function AcuityProcessSection() {
                     >
                         {PROCESS_STEPS.map((step, index) => (
                             <SwiperSlide key={index}>
-                                <div className="bg-[#EBEDF0] rounded-[12px] overflow-hidden p-4 sm:p-8 lg:p-12 flex flex-col gap-8 relative">
+                                <div className="bg-[#EBEDF0] rounded-[12px] overflow-hidden px-4 pt-8 sm:px-8 lg:pl-12 lg:pr-10 lg:pt-10 flex flex-col gap-2 relative">
 
                                     {/* Header Row: Step Number + Navigation Buttons (Spans full width) */}
-                                    <div className="flex items-center justify-between w-full">
+                                    <div className="flex items-center justify-between w-full lg:pr-12">
                                         {/* Step Number Badge */}
-                                        <div className="w-16 h-16 rounded-xl bg-white flex items-center justify-center shadow-sm">
+                                        <div className="w-16 h-16 rounded-xl bg-white flex items-center justify-center">
                                             <span className="font-aeonik text-2xl font-normal text-[#1E293B]">{step.number}</span>
                                         </div>
 
@@ -115,13 +104,13 @@ export default function AcuityProcessSection() {
                                         <div className="flex items-center gap-2">
                                             <button
                                                 onClick={() => swiperRef.current?.slidePrev()}
-                                                className="w-16 h-12 rounded-full bg-[#F9F9FA] flex items-center justify-center text-[#1E293B] hover:bg-white transition-all duration-300 shadow-sm"
+                                                className="w-16 h-12 rounded-full bg-[#F9F9FA] flex items-center justify-center text-[#1E293B] hover:bg-white transition-all duration-300 shadow-sm cursor-pointer"
                                             >
                                                 <FiArrowLeft className="w-5 h-5" />
                                             </button>
                                             <button
                                                 onClick={() => swiperRef.current?.slideNext()}
-                                                className="w-16 h-12 rounded-full bg-[#F9F9FA] flex items-center justify-center text-[#1E293B] hover:bg-white transition-all duration-300 shadow-sm"
+                                                className="w-16 h-12 rounded-full bg-[#F9F9FA] flex items-center justify-center text-[#1E293B] hover:bg-white transition-all duration-300 shadow-sm cursor-pointer"
                                             >
                                                 <FiArrowRight className="w-5 h-5" />
                                             </button>
@@ -129,10 +118,10 @@ export default function AcuityProcessSection() {
                                     </div>
 
                                     {/* Main Content Area */}
-                                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                                         {/* Left Side: Text Content */}
-                                        <div className="w-full lg:w-[45%] flex flex-col items-start pt-4">
-                                            <h3 className="font-aeonik text-4xl sm:text-5xl text-[#1E293B] font-normal mb-6 tracking-tight">
+                                        <div className="w-full flex flex-col items-start pt-4">
+                                            <h3 className="font-aeonik text-4xl sm:text-4xl text-[#1E293B] font-normal mb-6 tracking-tight">
                                                 {step.title}
                                             </h3>
 
@@ -145,7 +134,7 @@ export default function AcuityProcessSection() {
                                                         <div className="flex-shrink-0">
                                                             <IoCheckmarkCircle className="w-5 h-5 text-[#516C83]" />
                                                         </div>
-                                                        <span className="font-aeonik text-base text-[#1E293B]/70 leading-snug">
+                                                        <span className="font-aeonik text-base text-black leading-snug">
                                                             {item}
                                                         </span>
                                                     </div>
@@ -154,12 +143,13 @@ export default function AcuityProcessSection() {
                                         </div>
 
                                         {/* Right Side: Image Content */}
-                                        <div className="w-full lg:w-[55%] relative aspect-[16/10] sm:aspect-[16/9] rounded-[24px] overflow-hidden border border-black/5 shadow-inner">
+                                        <div className="w-full relative border-[10px] border-[#C1CAD1] !border-b-0 rounded-tl-[32px] rounded-tr-[32px] overflow-hidden bg-white/5">
                                             <Image
                                                 src={step.image}
                                                 alt={step.title}
-                                                fill
-                                                className="object-cover"
+                                                width={700}
+                                                height={500}
+                                                className="w-full h-auto block object-contain"
                                                 priority
                                             />
                                         </div>
